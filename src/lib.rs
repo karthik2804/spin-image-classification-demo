@@ -63,6 +63,7 @@ enum ClassificationError {
     Unclassified,
 }
 
+// Adapted from https://github.com/sonos/tract/blob/main/examples/tensorflow-mobilenet-v2/src/main.rs
 fn classify(img: Vec<u8>) -> Result<ClassificationResult, ClassificationError> {
     let model = tract_tensorflow::tensorflow()
         .model_for_read(&mut Cursor::new(include_bytes!(
