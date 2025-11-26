@@ -1,0 +1,19 @@
+[package]
+name = "spin-image-classification-demo"
+authors = ["Karthik Ganeshram <karthik.ganeshram@fermyon.com>"]
+description = ""
+version = "0.1.0"
+rust-version = "1.78"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "1.0.93"
+spin-sdk = "5.1.0"
+image = { version = "0.25.5", default-features = false, features = ["jpeg"] }
+tract = "0.21.7"
+tract-tensorflow = "0.21.7"
+
+[workspace]
